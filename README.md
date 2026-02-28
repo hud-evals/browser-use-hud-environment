@@ -1,6 +1,6 @@
 # Browser Use HUD Environment
 
-A fully functional [HUD](https://hud.ai) environment that wraps the [Browser Use](https://github.com/browser-use/browser-use) Python SDK into tool calls. Every Browser Use action (`navigate`, `click`, `input`, `scroll`, `evaluate`, etc.) is exposed as a top-level HUD tool — no JSON wrappers, no internal agent loop.
+A fully functional [HUD](https://hud.ai) environment that wraps the [Browser Use](https://github.com/browser-use/browser-use) Python SDK into tool calls. Every Browser Use action (`navigate`, `click`, `input`, `scroll`, `evaluate`, etc.) is exposed as a top-level HUD tool.
 
 Includes two scenarios out of the box:
 
@@ -22,9 +22,9 @@ hud dev env:env
 hud deploy
 ```
 
-**Evaluate** — create tasks in `tasks.json` (or on the platform), then run evals against any model. Results feed into the HUD leaderboard and can be used to train agents with RL.
+**Train** — create tasks from your scenarios on [hud.ai](https://hud.ai), run evals across models, then train directly on successful traces. Fork a base model at [hud.ai/models](https://hud.ai/models), select a taskset, and the platform handles fine-tuning — each run produces a new checkpoint you can set as HEAD and use immediately.
 
-See the [HUD docs](https://docs.hud.ai) for the full workflow: [Environments](https://docs.hud.ai/platform/environments) · [CLI Reference](https://docs.hud.ai/reference/cli/overview) · [Evaluation Guide](https://docs.hud.ai/quick-links/environments)
+See the [HUD docs](https://docs.hud.ai) for the full workflow: [Environments](https://docs.hud.ai/platform/environments) · [Tasks & Training](https://docs.hud.ai/quick-links/evals) · [Models](https://docs.hud.ai/platform/models)
 
 ## Extending
 
