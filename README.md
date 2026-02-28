@@ -7,9 +7,17 @@ Includes two scenarios out of the box:
 - **`answer`** — browse to a URL, complete a task, optionally compare against an expected answer.
 - **`wiki-game`** — navigate Wikipedia from a start page to a target page using only link clicks (fewer clicks = higher reward).
 
+**Deployed environment:** [hud.ai/environments/98905607-59c6-4f38-a176-43f7b5944a0f](https://www.hud.ai/environments/98905607-59c6-4f38-a176-43f7b5944a0f)
+
 ## Using this with HUD
 
-**Run locally** — install and launch the MCP server:
+Install the HUD CLI / SDK:
+
+```bash
+pip install hud-python
+```
+
+**Run locally** — install deps and launch the MCP server:
 
 ```bash
 pip install -e .
