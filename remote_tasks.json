@@ -1,0 +1,14 @@
+[
+  {
+    "env": {
+      "name": "browser-use-hud-environment"
+    },
+    "scenario": "browser-use-hud-environment:answer",
+    "args": {
+      "url": "https://example.com",
+      "prompt": "Open https://example.com and return the page title.",
+      "expected": "Example Domain",
+      "compare_mode": "contains"
+    }
+  }
+]

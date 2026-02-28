@@ -1,0 +1,23 @@
+FROM public.ecr.aws/docker/library/python:3.12-bookworm
+
+WORKDIR /app
+
+# Local browser runtime for Browser Use sessions.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    chromium \
+  && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml README.md ./
+RUN pip install --no-cache-dir .
+
+COPY env.py ./
+COPY remote_tasks.json ./
+
+ENV PYTHONUNBUFFERED=1
+ENV ANONYMIZED_TELEMETRY=false
+ENV BROWSER_USE_SETUP_LOGGING=false
+ENV BROWSER_USE_EXECUTABLE_PATH=/usr/bin/chromium
+ENV BROWSER_USE_HEADLESS=true
+
+CMD ["hud", "dev", "env:env", "--stdio"]
